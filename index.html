@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101828" />
+  <title>Operação Conjuntos</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="Operação Conjuntos, início">
+        <span class="brand-mark" aria-hidden="true">∪</span>
+        <span>OPERAÇÃO<br /><strong>CONJUNTOS</strong></span>
+      </a>
+      <div class="top-note"><span class="live-dot"></span> MISSÃO DE TREINAMENTO</div>
+    </header>
+
+    <section id="inicio" class="screen welcome-screen" aria-labelledby="welcome-title">
+      <div class="welcome-copy">
+        <p class="eyebrow">CENTRO DE COMANDO · MATEMÁTICA DISCRETA</p>
+        <h1 id="welcome-title">Quatro operações.<br />Uma grande <span>missão.</span></h1>
+        <p class="intro">A jovem analista Lia está em seu primeiro turno no Arquivo Central quando uma falha mistura os registros de pesquisa da cidade. Seja sua parceira: ajude-a a recuperar os dados, conferir listas e liberar os relatórios corretos para a equipe.</p>
+        <button id="start-button" class="button button-primary" type="button">Iniciar campanha <span aria-hidden="true">→</span></button>
+        <details class="how-to-play">
+          <summary>Como jogar e aprender</summary>
+          <ol>
+            <li>Leia a operação e observe os conjuntos apresentados.</li>
+            <li>Escolha a alternativa que resolve o desafio. As perguntas e alternativas mudam de ordem a cada partida.</li>
+            <li>Veja o feedback e a explicação. Cada acerto vale 10 pontos; erro não tira pontos.</li>
+            <li>Use <strong>Continuar missão</strong> para avançar. Cada partida sorteia 10 questões do banco de 12, cobrindo as quatro operações.</li>
+          </ol>
+          <p>União reúne; interseção encontra o que é comum; complemento depende do universo U; subconjunto verifica se todos os elementos de A estão em B.</p>
+        </details>
+        <p class="microcopy">04 OPERAÇÕES <span>·</span> 10 QUESTÕES SORTEADAS DE 12</p>
+      </div>
+      <div class="hero-art" aria-label="Ilustração de dois conjuntos que se sobrepõem">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="venn venn-a"><span>A</span><i>1</i><i>2</i><i>3</i></div>
+        <div class="venn venn-b"><span>B</span><i>3</i><i>4</i><i>5</i></div>
+        <div class="art-caption"><span class="caption-line"></span> DOIS CONJUNTOS · UMA UNIÃO</div>
+      </div>
+      <div class="welcome-footer"><span>12 QUESTÕES NO BANCO</span><span>APRENDER · PRATICAR · AVANÇAR</span></div>
+    </section>
+
+    <section id="game" class="screen game-screen hidden" aria-labelledby="game-title">
+      <div class="game-heading">
+        <div><p id="mission-label" class="eyebrow">MISSÃO 01 · UNIÃO</p><h2 id="game-title" tabindex="-1">Reúna os elementos</h2></div>
+        <div class="score-box"><span>PONTOS</span><strong id="score">0</strong></div>
+      </div>
+      <div class="progress-track" aria-label="Progresso da missão"><span id="progress-bar"></span></div>
+      <div class="challenge-card">
+        <div class="challenge-label"><span class="number-chip" id="question-number">01</span><span>DESAFIO</span><span class="challenge-count" id="challenge-count">1 DE 3</span></div>
+        <p id="story-text" class="instruction">O arquivo central foi dividido entre dois setores. Reúna tudo o que aparece em A ou em B, sem repetir elementos.</p>
+        <div id="sets-row" class="sets-row" aria-label="Conjuntos do desafio">
+          <div class="set-card"><span id="set-a-label">CONJUNTO A</span><strong id="set-a">{ 1, 2, 3 }</strong></div>
+          <span id="set-operator" class="operator">∪</span>
+          <div id="set-b-card" class="set-card"><span id="set-b-label">CONJUNTO B</span><strong id="set-b">{ 3, 4 }</strong></div>
+        </div>
+        <h3 id="question-prompt" class="question-prompt">Qual é o resultado de <span id="expression">A ∪ B</span>?</h3>
+        <div id="answers" class="answer-grid" role="group" aria-label="Escolha uma resposta"></div>
+        <div id="feedback" class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="game-bottom"><button id="restart-button" class="text-button" type="button">↺ Reiniciar campanha</button><button id="sound-toggle" class="text-button" type="button" aria-pressed="true">♫ Som ligado</button><span>ESCOLHA UMA ALTERNATIVA PARA RESPONDER</span></div>
+    </section>
+
+    <footer class="site-footer"><span>UM JOGO DE MATEMÁTICA DISCRETA</span><span>APRENDER É UMA OPERAÇÃO.</span></footer>
+  </main>
+</body>
+</html>
